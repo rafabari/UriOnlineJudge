@@ -1,0 +1,36 @@
+build.xml
+manifest.mf
+
+/.project
+/.classpath
+/target
+/.settings
+
+/target/
+/.idea
+/target
+/.classpath
+/.settings
+
+# NetBeans specific #
+nbproject/private/
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+.idea/*
+.settings/*
+*.iml
+
+*.log
