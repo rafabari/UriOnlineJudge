@@ -7,6 +7,8 @@ package UriOnlineJudge.ABeginner;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  *
@@ -21,8 +23,11 @@ public class Number1009SalaryWithBonus {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
         final String name = br.readLine();
-        final Float salary = Float.valueOf(br.readLine());
-        final Float valueSold = Float.valueOf(br.readLine());
+        final BigDecimal salary = new BigDecimal(br.readLine()).setScale(2);
+        final BigDecimal valueSold = new BigDecimal(br.readLine()).setScale(2);
+        final BigDecimal salaryWithBonus = salary.add(valueSold.multiply(new BigDecimal("0.15"))).setScale(2, RoundingMode.HALF_EVEN);
+        String salaryWithBonusString = salaryWithBonus.toString();
+        System.out.printf("TOTAL = R$ "+salaryWithBonusString+"\n");
     }
     
 }
